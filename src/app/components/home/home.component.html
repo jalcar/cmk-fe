@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <h1>Contenidos de Destacados</h1>
+    <hr>
+    <div class="container container-main">
+        <div *ngIf="contenidos" class="card-columns">
+            <div *ngFor="let item of contenidos" class="card">
+                <img [src]="(UrlBaseImg + item.imagenFondo.url)" class="card-img-top" [alt]="item.imagenFondo.asset.fileName">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.titular.value }}</h5>
+                    <p class="card-text">{{ item.bajada.value }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<div *ngIf="contenidos" class="footer">Contentos 2020</div>
